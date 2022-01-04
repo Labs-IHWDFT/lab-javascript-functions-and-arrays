@@ -1,5 +1,11 @@
 name: Automated Testing
-on: push
+on:
+  push:
+    branches:
+    - solution
+  pull_request:
+    branches:
+    - solution
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -9,7 +15,7 @@ jobs:
       - name: Prepare environment
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '16'
           check-latest: true
       - name: Install dependencies
         run: npm i
