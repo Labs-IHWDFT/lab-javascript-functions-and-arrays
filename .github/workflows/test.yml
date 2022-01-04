@@ -1,11 +1,5 @@
 name: Automated Testing
-on:
-  push:
-    branches:
-    - solution
-  pull_request:
-    branches:
-    - solution
+on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
